@@ -1,0 +1,181 @@
+.wrapper {
+  width: 300px;
+  margin: 100px auto;
+}
+
+.chinchilla {
+  position: relative;
+  animation-name: bounce;
+  animation-duration: 3s;
+  animation-delay: 2s;
+  animation-iteration-count: infinite;
+  animation-play-state: running;
+}
+
+.ear-left-outside {
+  position: absolute;
+  width: 70px;
+  height: 88px;
+  left: 20px;
+  top: -40px;
+  background: #d9d9d9;
+  transform: rotate(-45deg);
+  border-radius: 50%;
+  z-index: -2;
+  animation-name: left-outside;
+  animation-duration: 3s;
+  animation-delay: 2s;
+  animation-iteration-count: infinite;
+  animation-play-state: running;
+}
+
+.ear-left-inside {
+  position: absolute;
+  width: 40px;
+  height: 62px;
+  left: 20px;
+  top: -24px;
+  background: pink;
+  transform: rotate(-45deg);
+  border-radius: 50%;
+  z-index: -1;
+}
+
+.ear-right-outside {
+  position: absolute;
+  width: 70px;
+  height: 80px;
+  left: 160px;
+  top: -40px;
+  background: #d9d9d9;
+  transform: rotate(45deg);
+  border-radius: 50%;
+  z-index: -2;
+  animation-name: right-outside;
+  animation-duration: 3s;
+  animation-delay: 2s;
+  animation-iteration-count: infinite;
+  animation-play-state: running;
+}
+
+.ear-right-inside {
+  position: absolute;
+  width: 40px;
+  height: 62px;
+  left: 188px;
+  top: -30px;
+  background: pink;
+  transform: rotate(45deg);
+  border-radius: 50%;
+  z-index: -1;
+}
+
+.tongue {
+  position: absolute;
+  width: 32px;
+  height: 14px;
+  left: 108px;
+  top: 120px;
+  background: #fa8484;
+  border-radius: 0px 0px 80px 80px;
+  animation-name: long-tongue;
+  animation-duration: 3s;
+  animation-delay: 2s;
+  animation-iteration-count: infinite;
+  animation-play-state: running;
+}
+
+.tail {
+  position: absolute;
+  width: 45.27px;
+  height: 145.15px;
+  left: 250px;
+  top: 190px;
+  background: #d1cbcb;
+  transform: rotate(109.7deg);
+  border-radius: 400px 100px 0px 0;
+  z-index: -1;
+  animation-name: shaking-tail;
+  animation-duration: 3s;
+  animation-delay: 2s;
+  animation-iteration-count: infinite;
+  animation-play-state: running;
+}
+
+@keyframes bounce {
+  0%,
+  100%,
+  20%,
+  50%,
+  80% {
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+  }
+  40% {
+    -webkit-transform: translateY(-30px);
+    -ms-transform: translateY(-30px);
+    transform: translateY(-30px);
+  }
+  60% {
+    -webkit-transform: translateY(-15px);
+    -ms-transform: translateY(-15px);
+    transform: translateY(-15px);
+  }
+}
+
+@keyframes left-outside {
+  0% {
+    background-color: #d9d9d9;
+    transform: scale(1) rotate(-45deg);
+  }
+  50% {
+    background-color: yellow;
+    transform: scale(1.2) rotate(-45deg);
+  }
+  100% {
+    background-color: pink;
+    transform: scale(1.5) rotate(-45deg);
+  }
+}
+
+@keyframes right-outside {
+  0% {
+    background-color: #d9d9d9;
+    transform: scale(1) rotate(45deg);
+  }
+  50% {
+    background-color: yellow;
+    transform: scale(1.2) rotate(45deg);
+  }
+  100% {
+    background-color: pink;
+    transform: scale(1.5) rotate(45deg);
+  }
+}
+
+@keyframes long-tongue {
+  0% {
+    height: 10px;
+  }
+
+  50% {
+    height: 20px;
+  }
+  100% {
+    height: 30px;
+  }
+}
+
+@keyframes shaking-tail {
+  0% {
+    transform: rotate(109.7deg);
+  }
+
+  50% {
+    transform: rotate(100deg);
+  }
+  100% {
+    transform: rotate(90.7deg);
+  }
+}
